@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0b1021;
+  background: #f6f7fb;
+}
+
+body {
+  @apply bg-mist text-ink antialiased;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 20% 20%, rgba(120, 170, 54, 0.12), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(11, 16, 33, 0.2), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #f6f7fb 60%, #eef1f7 100%);
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-lg shadow-glass rounded-3xl border border-white/50;
+}
+
+.section-shell {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-ink text-white px-5 py-3 font-semibold shadow-lg shadow-ink/10 transition hover:-translate-y-0.5 hover:shadow-ink/20 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-5 py-3 font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl font-semibold tracking-tight text-ink;
+}
